@@ -3,4 +3,9 @@
   tasks:
     - name: Check users
       shell: id
+      register: res
+      
+    - name: Show
+      debug:
+        msg: "{{ res }}"
 ...
