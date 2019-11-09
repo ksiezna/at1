@@ -1,0 +1,6 @@
+---
+- hosts: "{{ specified_hosts }}"
+  tasks:
+    - name: Check users
+      shell: id
+...
