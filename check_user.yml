@@ -8,4 +8,7 @@
     - name: Show
       debug:
         msg: "{{ res }}"
+
+    - name: show host var
+      shell: echo $kupa
 ...
