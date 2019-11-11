@@ -11,4 +11,9 @@
 
     - name: show host var
       shell: echo $kupa
+      register: kres
+
+    - name: Show kres
+      debug:
+        msg: "{{ kres }}"
 ...
