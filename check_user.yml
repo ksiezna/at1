@@ -10,7 +10,7 @@
         msg: "{{ res }}"
 
     - name: show host var
-      shell: echo $kupa
+      shell: echo {{kupa}}
       register: kres
 
     - name: Show kres
