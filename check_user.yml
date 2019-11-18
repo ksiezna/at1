@@ -1,5 +1,8 @@
 ---
 - hosts: "{{ specified_hosts }}"
+  vars_files:
+    - v1
+    - v2
   tasks:
     - name: Check users
       shell: id
@@ -16,4 +19,12 @@
     - name: Show kres
       debug:
         msg: "{{ kres }}"
+
+    - name: show dupa
+      debug:
+        msg: "{{ msg1 }}"
+
+    - name: show dupa2
+      debug:
+        msg: "{{ msg2 }}"
 ...
