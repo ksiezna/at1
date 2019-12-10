@@ -27,4 +27,10 @@
     - name: show dupa2
       debug:
         msg: "{{ msg2 }}"
+        
+    - name: tylko kiedy tag jest doit
+      debug:
+        msg: "Mejla ślij!"
+      tags:
+        - doit
 ...
