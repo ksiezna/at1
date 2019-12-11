@@ -2,6 +2,16 @@
 - hosts: server30.example.com
   tasks:
     - name: Check users
-      shell: id > /root/wynik
-      delegate_to: server30.example.com
+      shell: id > /tmp/wynik
+      delegate_to: amaster1.example.com
+
+   - name: cat on server30
+     shell: cat /tmp/wynik
+     ignore_errors: yes
+
+- hosts: amaster1.example.com
+  tasks:
+   - name: cat on amaster1
+     shell: cat /tmp/wynik
+     ignore_errors: yes
 ...
