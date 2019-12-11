@@ -1,0 +1,6 @@
+---
+- hosts: server30.example.com
+  tasks:
+    - name: Check users
+      shell: id
+...
